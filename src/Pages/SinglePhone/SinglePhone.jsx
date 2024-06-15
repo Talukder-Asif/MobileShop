@@ -40,7 +40,7 @@ const SinglePhone = () => {
                         <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">Rating: {currentPhone?.rating}</h3>
                         
                     </div>
-                    <button onClick={() => setOpenModal(true)} className="mt-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Pay Now</button>
+                    <button onClick={() => setOpenModal(true)} className="mt-6 text-white bg-sky-500 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-sky-500 dark:focus:ring-blue-800">Pay Now</button>
 
 
                     {/* Modal Start */}
