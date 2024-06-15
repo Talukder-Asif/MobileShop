@@ -41,12 +41,12 @@ const Navbar = () => {
       </li>
       <li className={desktopCSS}>
       <NavLink
-          to={`/shop`}
+          to={`/card`}
           className={({ isActive, isPending }) =>
             isActive ? `text-sky-500 ${desktopCSS}` : isPending ? desktopCSS : desktopCSS
           }
         >
-          Shop
+          Card
         </NavLink>
         {HoverEffect}
       </li>
@@ -93,12 +93,12 @@ const Navbar = () => {
       </li>
       <li className={mobileCSS}>
       <NavLink
-          to={`/shop`}
+          to={`/card`}
           className={({ isActive, isPending }) =>
             isActive ? `text-sky-300` : isPending ? "" : "" 
           }
         >
-          Shop
+          Card
         </NavLink>
       </li>
       <li className={mobileCSS}>

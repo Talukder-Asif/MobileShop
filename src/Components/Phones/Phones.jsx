@@ -9,7 +9,6 @@ const Phones = () => {
         .then (res => res.json())
         .then(data => setData(data));
     },[])
-    console.log(data.length);
     return (
         <div className=" px-3">
 

@@ -10,8 +10,6 @@ const SinglePhone = () => {
         .then(data => setData(data));
     },[])
     const currentPhone = data.find(data => data?.id === ID);
-    console.log(currentPhone)
-
     const [openModal, setOpenModal] = useState(false);
     useEffect(() => {
         if (openModal) {

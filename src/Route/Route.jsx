@@ -3,6 +3,7 @@ import MainLayout from "../Layout/MainLayout";
 import HomePage from "../Pages/HomePage/HomePage";
 import SignIn from "../Pages/Signin/SignIn";
 import SinglePhone from "../Pages/SinglePhone/SinglePhone";
+import Card from "../Pages/Card/Card";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,12 @@ const router = createBrowserRouter([
       {
         path:`/phone/:id`,
         element:<SinglePhone></SinglePhone>,
-      }
+      },
+      {
+        path:`/card`,
+        element:<Card></Card>,
+      },
+
     ],
   },
 ]);
