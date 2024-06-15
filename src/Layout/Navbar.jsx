@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [dropDownState, setDropDownState] = useState(false);
@@ -28,35 +28,100 @@ const Navbar = () => {
   const desktopMenu = (
     <>
       <li className={desktopCSS}>
-        <Link to="/">Home</Link>
+        <NavLink
+          to={`/`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-500 ${desktopCSS}` : isPending ? desktopCSS : desktopCSS
+          }
+        >
+          Home
+        </NavLink>
+        {HoverEffect}
+
+      </li>
+      <li className={desktopCSS}>
+      <NavLink
+          to={`/shop`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-500 ${desktopCSS}` : isPending ? desktopCSS : desktopCSS
+          }
+        >
+          Shop
+        </NavLink>
         {HoverEffect}
       </li>
       <li className={desktopCSS}>
-        Shop
-        {HoverEffect}
-      </li>
-      <li className={desktopCSS}>
-        About
+      <NavLink
+          to={`/about`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-500 ${desktopCSS}` : isPending ? desktopCSS : desktopCSS
+          }
+        >
+          About
+        </NavLink>
         {HoverEffect}
       </li>
 
       <li className={desktopCSS}>
-        Contact
+      <NavLink
+          to={`/signin`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-500 ${desktopCSS}` : isPending ? desktopCSS : desktopCSS
+          }
+        >
+          Login
+        </NavLink>
         {HoverEffect}
       </li>
     </>
   );
 
   const mobileCSS =
-    "cursor-pointer  px-6 py-2 text-white rounded-t-lg hover:bg-sky-600 ";
+    "cursor-pointer  px-4 my-2 text-white border-b-2 border-transparent rounded-t-lg hover:border-sky-600 ";
 
   const mobileMenu = (
     <>
-      <li className={mobileCSS}><Link to='/'>Home</Link></li>
-      <li className={mobileCSS}>Shop</li>
-      <li className={mobileCSS}>About</li>
+      <li className={mobileCSS}>
+      <NavLink
+          to={`/`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-300` : isPending ? "" : "" 
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li className={mobileCSS}>
+      <NavLink
+          to={`/shop`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-300` : isPending ? "" : "" 
+          }
+        >
+          Shop
+        </NavLink>
+      </li>
+      <li className={mobileCSS}>
+      <NavLink
+          to={`/about`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-300` : isPending ? "" : "" 
+          }
+        >
+          About
+        </NavLink>
+      </li>
 
-      <li className={mobileCSS}>Contact</li>
+      <li className={mobileCSS}>
+      <NavLink
+          to={`/signin`}
+          className={({ isActive, isPending }) =>
+            isActive ? `text-sky-300` : isPending ? "" : "" 
+          }
+        >
+          Login
+        </NavLink>
+      </li>
     </>
   );
 

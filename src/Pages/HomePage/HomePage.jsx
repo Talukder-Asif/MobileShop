@@ -1,7 +1,11 @@
+import Banner from "../../Components/Banners/Banner";
+import Phones from "../../Components/Phones/Phones";
+
 const HomePage = () => {
     return (
         <div>
-            this is home page
+            <Banner></Banner>
+            <Phones></Phones>
         </div>
     );
 };
